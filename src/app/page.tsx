@@ -24,7 +24,7 @@ export default function Home() {
         <ScrollFadeSection variant="late"><ProjectsSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><SkillsSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><CertificatesSection /></ScrollFadeSection>
-        <ScrollFadeSection><ContactSection /></ScrollFadeSection>
+        <ContactSection />
         <Footer />
       </main>
     </LanguageProvider>

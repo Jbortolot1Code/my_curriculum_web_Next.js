@@ -194,7 +194,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       },
     },
     footer: {
-      copyright: "Currículo web e portfólio profissional",
+      copyright: "Currículo web com desenvolvimento autônomo por Jéferson Bortoloti",
       downloadCV: "Baixar Currículo Acadêmico",
     },
     profile: {
@@ -202,7 +202,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       summary:
         "Sou entusiasta de dados, estatística, cálculo, automação de processos, dashboards interativos e soluções aplicadas a Datawarehouses. Tenho projetos em Python, SQL, VBA, Access, SQLite e Streamlit, com foco em cálculos, apurações, benchmarks, análise gerencial e uso inteligente de grandes volumes de dados.",
       contactText:
-        "Estou aberto a conexões profissionais, troca de experiências e oportunidades relacionadas a dados, automação, análise e desenvolvimento de soluções aplicadas.",
+        "Estou aberto a conexões profissionais, troca de experiências e oportunidades relacionadas a dados, automação, análise e desenvolvimento de soluções aplicadas. Tenho disponibilidade para realocação para outros estados ou países.",
     },
   },
 
@@ -399,7 +399,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       },
     },
     footer: {
-      copyright: "Web resume and professional portfolio",
+      copyright: "Web resume with independent development by Jéferson Bortoloti",
       downloadCV: "Download Academic CV",
     },
     profile: {
@@ -407,7 +407,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       summary:
         "I am passionate about data, statistics, calculus, process automation, interactive dashboards and solutions applied to Data Warehouses. I have projects in Python, SQL, VBA, Access, SQLite and Streamlit, focused on calculations, audits, benchmarks, management analysis and intelligent use of large data volumes.",
       contactText:
-        "I am open to professional connections, experience sharing and opportunities related to data, automation, analysis and development of applied solutions.",
+        "I am open to professional connections, experience sharing and opportunities related to data, automation, analysis and development of applied solutions. I am available for relocation to other states or countries.",
     },
   },
 
@@ -604,7 +604,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       },
     },
     footer: {
-      copyright: "Currículum web y portafolio profesional",
+      copyright: "Currículum web con desarrollo independiente por Jéferson Bortoloti",
       downloadCV: "Descargar Currículum Académico",
     },
     profile: {
@@ -612,7 +612,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       summary:
         "Soy entusiasta de datos, estadística, cálculo, automatización de procesos, dashboards interactivos y soluciones aplicadas a Data Warehouses. Tengo proyectos en Python, SQL, VBA, Access, SQLite y Streamlit, con enfoque en cálculos, auditorías, benchmarks, análisis gerencial y uso inteligente de grandes volúmenes de datos.",
       contactText:
-        "Estoy abierto a conexiones profesionales, intercambio de experiencias y oportunidades relacionadas con datos, automatización, análisis y desarrollo de soluciones aplicadas.",
+        "Estoy abierto a conexiones profesionales, intercambio de experiencias y oportunidades relacionadas con datos, automatización, análisis y desarrollo de soluciones aplicadas. Tengo disponibilidad para reubicación en otros estados o países.",
     },
   },
 };

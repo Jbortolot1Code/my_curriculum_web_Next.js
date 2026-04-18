@@ -3,6 +3,7 @@
 import { profile } from "@/data/profile";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { socialIcons } from "@/components/ui/SocialIcons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ContactSection() {
@@ -35,8 +36,9 @@ export function ContactSection() {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl border border-slate-700/50 bg-slate-900/60 px-5 py-3 text-sm font-medium text-white transition hover:border-slate-600/70 hover:bg-slate-800"
+                className="flex items-center gap-2 rounded-2xl border border-slate-700/50 bg-slate-900/60 px-5 py-3 text-sm font-medium text-white transition hover:border-slate-600/70 hover:bg-slate-800"
               >
+                {socialIcons[social.label]}
                 {social.label}
               </a>
             ))}

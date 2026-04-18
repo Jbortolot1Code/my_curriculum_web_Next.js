@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import { socialIcons } from "@/components/ui/SocialIcons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function HeroSection() {
@@ -34,8 +35,9 @@ export function HeroSection() {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl border border-slate-700/50 bg-slate-800/40 px-5 py-3 text-sm font-medium text-white transition hover:border-slate-600/70 hover:bg-slate-800"
+                className="flex items-center gap-2 rounded-2xl border border-slate-700/50 bg-slate-800/40 px-5 py-3 text-sm font-medium text-white transition hover:border-slate-600/70 hover:bg-slate-800"
               >
+                {socialIcons[social.label]}
                 {social.label}
               </a>
             ))}

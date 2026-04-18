@@ -10,7 +10,7 @@ export const profile: Profile = {
     "Estou aberto a conexões profissionais, troca de experiências e oportunidades relacionadas a dados, automação, análise e desenvolvimento de soluções aplicadas.",
   profileImage: "/images/profile/profile_ok.png",
   socials: [
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
+    { label: "GitHub", href: "https://github.com/Jbortolot1Code" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jeferson-bortoloti-1a1452404/" },
   ],
 };

@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c1220;
+  --surface: #111c30;
+  --foreground: #f1f5f9;
+  --muted: #94a3b8;
+  --border-soft: rgba(148, 163, 184, 0.12);
+  --glass: rgba(148, 163, 184, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(99, 102, 241, 0.07), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(14, 165, 233, 0.04), transparent 50%),
+    #0c1220;
+  color: #f1f5f9;
+}
+
+/* ── LED Glow – cards ──────────────────────────────────────── */
+
+.glow-cyan {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.12),
+    0 0 20px 4px rgba(34, 211, 238, 0.07),
+    0 0 60px 10px rgba(34, 211, 238, 0.04);
+  border-color: rgba(34, 211, 238, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-cyan:hover {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.22),
+    0 0 28px 6px rgba(34, 211, 238, 0.12),
+    0 0 80px 14px rgba(34, 211, 238, 0.07);
+  border-color: rgba(34, 211, 238, 0.35) !important;
+}
+
+.glow-purple {
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.12),
+    0 0 20px 4px rgba(168, 85, 247, 0.07),
+    0 0 60px 10px rgba(168, 85, 247, 0.04);
+  border-color: rgba(168, 85, 247, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-purple:hover {
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.22),
+    0 0 28px 6px rgba(168, 85, 247, 0.12),
+    0 0 80px 14px rgba(168, 85, 247, 0.07);
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+.glow-green {
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.12),
+    0 0 20px 4px rgba(74, 222, 128, 0.07),
+    0 0 60px 10px rgba(74, 222, 128, 0.04);
+  border-color: rgba(74, 222, 128, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-green:hover {
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.22),
+    0 0 28px 6px rgba(74, 222, 128, 0.12),
+    0 0 80px 14px rgba(74, 222, 128, 0.07);
+  border-color: rgba(74, 222, 128, 0.35) !important;
+}
+
+.glow-amber {
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.12),
+    0 0 20px 4px rgba(251, 191, 36, 0.07),
+    0 0 60px 10px rgba(251, 191, 36, 0.04);
+  border-color: rgba(251, 191, 36, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-amber:hover {
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.22),
+    0 0 28px 6px rgba(251, 191, 36, 0.12),
+    0 0 80px 14px rgba(251, 191, 36, 0.07);
+  border-color: rgba(251, 191, 36, 0.35) !important;
+}
+
+.glow-blue {
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.12),
+    0 0 20px 4px rgba(96, 165, 250, 0.07),
+    0 0 60px 10px rgba(96, 165, 250, 0.04);
+  border-color: rgba(96, 165, 250, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-blue:hover {
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.22),
+    0 0 28px 6px rgba(96, 165, 250, 0.12),
+    0 0 80px 14px rgba(96, 165, 250, 0.07);
+  border-color: rgba(96, 165, 250, 0.35) !important;
+}
+
+.glow-indigo {
+  box-shadow:
+    0 0 0 1px rgba(129, 140, 248, 0.12),
+    0 0 20px 4px rgba(129, 140, 248, 0.07),
+    0 0 60px 10px rgba(129, 140, 248, 0.04);
+  border-color: rgba(129, 140, 248, 0.2) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glow-indigo:hover {
+  box-shadow:
+    0 0 0 1px rgba(129, 140, 248, 0.22),
+    0 0 28px 6px rgba(129, 140, 248, 0.12),
+    0 0 80px 14px rgba(129, 140, 248, 0.07);
+  border-color: rgba(129, 140, 248, 0.35) !important;
+}

@@ -23,13 +23,17 @@ export function ScrollFadeSection({
     const el = ref.current;
     if (!el) return;
 
+    const desktopMql = window.matchMedia("(min-width: 768px)");
+
     function update() {
+      if (!desktopMql.matches) {
+        el!.style.opacity = "";
+        return;
+      }
       const rect = el!.getBoundingClientRect();
       const vh = window.innerHeight;
 
       if (variant === "late") {
-        // Começa a desaparecer quando o bottom chega a 65% do viewport
-        // e termina quando o bottom sai pelo topo (< 0)
         const fadeStart = vh * 0.65;
         const fadeEnd = vh * -0.05;
 
@@ -46,7 +50,6 @@ export function ScrollFadeSection({
         return;
       }
 
-      // variant === "top" (comportamento padrão)
       const fadeStart = vh * 0.2;
       const fadeEnd = vh * -0.55;
 
@@ -63,9 +66,13 @@ export function ScrollFadeSection({
     }
 
     window.addEventListener("scroll", update, { passive: true });
+    desktopMql.addEventListener("change", update);
     update();
 
-    return () => window.removeEventListener("scroll", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      desktopMql.removeEventListener("change", update);
+    };
   }, [variant]);
 
   return (

@@ -31,7 +31,7 @@ export function CertificatesSection() {
     <>
       <section
         id="certificados"
-        className="mx-auto max-w-6xl border-t border-slate-700/40 px-6 py-24"
+        className="mx-auto max-w-6xl border-t border-slate-700/40 px-5 py-16 md:px-6 md:py-24"
       >
         <SectionHeader
           eyebrow={t("certificates.eyebrow")}
@@ -39,13 +39,13 @@ export function CertificatesSection() {
           description={t("certificates.description")}
         />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 no-scrollbar md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
           {certificateData.map((certificate, i) => {
             const ct = certTranslations[i];
             return (
               <article
                 key={certificate.id}
-                className="group overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-800/35 transition hover:bg-slate-800/55 glow-blue"
+                className="group w-[85%] shrink-0 snap-center overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-800/35 transition hover:bg-slate-800/55 glow-blue md:w-auto md:shrink"
               >
                 <button
                   type="button"
@@ -81,11 +81,11 @@ export function CertificatesSection() {
 
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 px-4 py-8"
+          className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-black/80 px-3 py-6 md:px-4 md:py-8"
           onClick={() => setSelectedIndex(null)}
         >
           <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-950 shadow-2xl"
+            className="relative my-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-950 shadow-2xl md:rounded-3xl"
             onClick={(event) => event.stopPropagation()}
           >
             <button
@@ -108,7 +108,7 @@ export function CertificatesSection() {
                 </div>
               </div>
 
-              <div className="p-8">
+              <div className="p-6 md:p-8">
                 <p className="mb-3 text-xs uppercase tracking-[0.2em] text-slate-500">
                   {certTranslations[selectedIndex].category}
                 </p>

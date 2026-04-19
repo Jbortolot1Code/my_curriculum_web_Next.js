@@ -13,25 +13,39 @@ export function StickyHeroSection({ children }: StickyHeroSectionProps) {
     const el = ref.current;
     if (!el) return;
 
+    const desktopMql = window.matchMedia("(min-width: 1024px)");
+
+    function reset() {
+      el!.style.opacity = "";
+      el!.style.pointerEvents = "";
+    }
+
     function update() {
+      if (!desktopMql.matches) {
+        reset();
+        return;
+      }
       const scrollY = window.scrollY;
       const vh = window.innerHeight;
-      // Fade completo ao rolar ~80% do viewport
       const opacity = Math.max(0, 1 - scrollY / (vh * 0.8));
       el!.style.opacity = String(opacity);
       el!.style.pointerEvents = opacity <= 0.01 ? "none" : "auto";
     }
 
     window.addEventListener("scroll", update, { passive: true });
+    desktopMql.addEventListener("change", update);
     update();
 
-    return () => window.removeEventListener("scroll", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      desktopMql.removeEventListener("change", update);
+    };
   }, []);
 
   return (
     <div
       ref={ref}
-      className="sticky top-0 z-0 h-screen overflow-hidden"
+      className="relative lg:sticky lg:top-0 lg:z-0 lg:h-screen lg:overflow-hidden"
       style={{ willChange: "opacity" }}
     >
       {children}

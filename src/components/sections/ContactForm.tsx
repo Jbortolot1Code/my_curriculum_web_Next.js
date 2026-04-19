@@ -51,7 +51,7 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-slate-700/60 bg-slate-900/50 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-slate-500 focus:bg-slate-900/80";
+    "w-full rounded-xl border border-slate-700/60 bg-slate-900/50 px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-slate-500 focus:bg-slate-900/80 md:py-3 md:text-sm";
 
   return (
     <form
@@ -130,7 +130,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-2xl bg-white px-6 py-3.5 text-sm font-medium text-slate-950 transition hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto md:py-3"
         >
           {status === "sending"
             ? t("contact.form.sending")

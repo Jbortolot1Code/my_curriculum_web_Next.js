@@ -198,11 +198,11 @@ export const translations: Record<Language, Record<string, unknown>> = {
       downloadCV: "Baixar Currículo Acadêmico",
     },
     profile: {
-      role: "Analista de Dados • Automação • Dashboards • Machine Learning",
+      role: "Dados, Automação e Soluções na Interface entre Negócio e Tecnologia",
       summary:
-        "Sou entusiasta de dados, estatística, cálculo, automação de processos, dashboards interativos e soluções aplicadas a Datawarehouses. Tenho projetos em Python, SQL, VBA, Access, SQLite e Streamlit, com foco em cálculos, apurações, benchmarks, análise gerencial e uso inteligente de grandes volumes de dados.",
+        "Atuo na interface entre negócio e tecnologia, traduzindo regras, processos e necessidades operacionais em soluções de dados, automação e apoio à decisão. Minha base começou com VBA, Power Query, Power Pivot e Access, evoluiu para Python e Jupyter Notebook na exploração e análise de dados, e hoje inclui dashboards em Streamlit, aplicações web com Next.js, pipelines e módulos para cálculos prospectivos de despesas, além de projetos de machine learning com foco em regressão linear. Também tenho experiência na refatoração de bases Access para SQLite, estruturando tabelas-fato com dezenas de milhões de registros para análise, desempenho e escalabilidade. Sou pós-graduando em Data Science e venho direcionando minha atuação para integrar conhecimento técnico, visão analítica e entendimento de negócio.",
       contactText:
-        "Estou aberto a conexões profissionais, troca de experiências e oportunidades relacionadas a dados, automação, análise e desenvolvimento de soluções aplicadas. Tenho disponibilidade para realocação para outros estados ou países.",
+        "Estou aberto a conexões profissionais e oportunidades em dados, automação e desenvolvimento de soluções aplicadas, especialmente em contextos que exijam articulação entre regras de negócio, análise e tecnologia.",
     },
   },
 
@@ -403,11 +403,11 @@ export const translations: Record<Language, Record<string, unknown>> = {
       downloadCV: "Download Academic CV",
     },
     profile: {
-      role: "Data Analyst • Automation • Dashboards • Machine Learning",
+      role: "Data, Automation and Solutions at the Interface between Business and Technology",
       summary:
-        "I am passionate about data, statistics, calculus, process automation, interactive dashboards and solutions applied to Data Warehouses. I have projects in Python, SQL, VBA, Access, SQLite and Streamlit, focused on calculations, audits, benchmarks, management analysis and intelligent use of large data volumes.",
+        "I work at the interface between business and technology, translating rules, processes and operational needs into data solutions, automation and decision support. My foundation started with VBA, Power Query, Power Pivot and Access, evolved to Python and Jupyter Notebook for data exploration and analysis, and today includes dashboards in Streamlit, web applications with Next.js, pipelines and modules for prospective expense calculations, as well as machine learning projects focused on linear regression. I also have experience refactoring Access databases to SQLite, structuring fact tables with tens of millions of records for analysis, performance and scalability. I am a postgraduate student in Data Science and have been directing my work to integrate technical knowledge, analytical vision and business understanding.",
       contactText:
-        "I am open to professional connections, experience sharing and opportunities related to data, automation, analysis and development of applied solutions. I am available for relocation to other states or countries.",
+        "I am open to professional connections and opportunities in data, automation and development of applied solutions, especially in contexts that require articulation between business rules, analysis and technology.",
     },
   },
 
@@ -608,11 +608,11 @@ export const translations: Record<Language, Record<string, unknown>> = {
       downloadCV: "Descargar Currículum Académico",
     },
     profile: {
-      role: "Analista de Datos • Automatización • Dashboards • Machine Learning",
+      role: "Datos, Automatización y Soluciones en la Interfaz entre Negocio y Tecnología",
       summary:
-        "Soy entusiasta de datos, estadística, cálculo, automatización de procesos, dashboards interactivos y soluciones aplicadas a Data Warehouses. Tengo proyectos en Python, SQL, VBA, Access, SQLite y Streamlit, con enfoque en cálculos, auditorías, benchmarks, análisis gerencial y uso inteligente de grandes volúmenes de datos.",
+        "Actúo en la interfaz entre negocio y tecnología, traduciendo reglas, procesos y necesidades operacionales en soluciones de datos, automatización y apoyo a la toma de decisiones. Mi base comenzó con VBA, Power Query, Power Pivot y Access, evolucionó hacia Python y Jupyter Notebook para la exploración y análisis de datos, y hoy incluye dashboards en Streamlit, aplicaciones web con Next.js, pipelines y módulos para cálculos prospectivos de gastos, además de proyectos de machine learning con enfoque en regresión lineal. También tengo experiencia en la refactorización de bases Access a SQLite, estructurando tablas de hechos con decenas de millones de registros para análisis, rendimiento y escalabilidad. Soy estudiante de posgrado en Data Science y he estado dirigiendo mi actuación para integrar conocimiento técnico, visión analítica y comprensión del negocio.",
       contactText:
-        "Estoy abierto a conexiones profesionales, intercambio de experiencias y oportunidades relacionadas con datos, automatización, análisis y desarrollo de soluciones aplicadas. Tengo disponibilidad para reubicación en otros estados o países.",
+        "Estoy abierto a conexiones profesionales y oportunidades en datos, automatización y desarrollo de soluciones aplicadas, especialmente en contextos que requieran articulación entre reglas de negocio, análisis y tecnología.",
     },
   },
 };

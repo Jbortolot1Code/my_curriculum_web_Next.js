@@ -39,11 +39,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <p className="order-5 mb-6 max-w-2xl text-sm leading-7 text-slate-400 md:mb-8 md:text-base md:leading-8 md:text-justify lg:text-lg">
-            {t("profile.summary")}
-          </p>
-
-          <div className="order-6 mb-6 flex flex-wrap gap-3 md:mb-8 md:gap-4">
+          <div className="order-5 mb-6 flex flex-wrap gap-3 md:mb-8 md:gap-4">
             {profile.socials.map((social) => (
               <a
                 key={social.label}
@@ -65,7 +61,7 @@ export function HeroSection() {
             </a>
           </div>
 
-          <div className="order-7 flex flex-wrap gap-6 text-sm text-slate-500">
+          <div className="order-6 flex flex-wrap gap-6 text-sm text-slate-500">
             <span>{profile.location}</span>
           </div>
         </div>

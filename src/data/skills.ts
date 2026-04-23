@@ -2,19 +2,23 @@ import type { SkillGroup } from "@/types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Linguagens e programação",
+    key: "languages",
+    title: "Linguagens & Programação",
     items: ["Python", "SQL", "VBA", "TypeScript"],
   },
   {
-    title: "Dados e bancos",
+    key: "backend",
+    title: "Back-end & Databases",
     items: ["Pandas", "SQLite", "Access", "ETL", "Modelagem de dados"],
   },
   {
-    title: "Visualização e apps",
+    key: "frontend",
+    title: "Front-end & Visualização",
     items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"],
   },
   {
-    title: "Análise e ML",
+    key: "ml",
+    title: "Análise & Machine Learning",
     items: ["Machine Learning", "Estatística", "Validação", "Feature engineering"],
   },
 ];

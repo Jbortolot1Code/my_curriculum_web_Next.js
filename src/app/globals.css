@@ -27,6 +27,150 @@ body {
   -ms-overflow-style: none;
 }
 
+/* ── Carousel ────────────────────────────────────────────── */
+.carousel-track {
+  /* Block inheriting html's smooth behavior so rAF hover scroll stays crisp */
+  scroll-behavior: auto;
+  overflow-x: auto;
+  scroll-snap-type: none;
+  /* Vertical padding expands the clip/padding-box so cards can translate
+     on hover and their glow can render without being clipped. The negative
+     margin cancels out the layout impact so the visual spacing is unchanged. */
+  padding-block: 2.5rem;
+  margin-block: -2.5rem;
+  /* Mobile edge padding so first/last card doesn't touch the viewport edge */
+  padding-inline: 1.25rem;
+  margin-inline: -1.25rem;
+}
+@media (min-width: 768px) {
+  .carousel-track {
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+}
+
+/* Cards inside a carousel get a tighter glow (the wide outer bloom would
+   be clipped by the scroll container, creating a visible rectangular frame
+   around the whole carousel). We drop the wide layer and keep only the
+   close-in glow which fits entirely within the available space. */
+.carousel-root .glow-cyan,
+.carousel-root .glow-cyan:hover {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.18),
+    0 0 16px 2px rgba(34, 211, 238, 0.08);
+}
+.carousel-root .glow-cyan:hover {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.3),
+    0 0 22px 4px rgba(34, 211, 238, 0.14);
+}
+
+.carousel-root .glow-purple {
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.18),
+    0 0 16px 2px rgba(168, 85, 247, 0.08);
+}
+.carousel-root .glow-purple:hover {
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.3),
+    0 0 22px 4px rgba(168, 85, 247, 0.14);
+}
+
+.carousel-root .glow-green {
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.18),
+    0 0 16px 2px rgba(74, 222, 128, 0.08);
+}
+.carousel-root .glow-green:hover {
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.3),
+    0 0 22px 4px rgba(74, 222, 128, 0.14);
+}
+
+.carousel-root .glow-amber {
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.18),
+    0 0 16px 2px rgba(251, 191, 36, 0.08);
+}
+.carousel-root .glow-amber:hover {
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.3),
+    0 0 22px 4px rgba(251, 191, 36, 0.14);
+}
+
+.carousel-root .glow-blue {
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.18),
+    0 0 16px 2px rgba(96, 165, 250, 0.08);
+}
+.carousel-root .glow-blue:hover {
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.3),
+    0 0 22px 4px rgba(96, 165, 250, 0.14);
+}
+
+.carousel-root .glow-indigo {
+  box-shadow:
+    0 0 0 1px rgba(129, 140, 248, 0.18),
+    0 0 16px 2px rgba(129, 140, 248, 0.08);
+}
+.carousel-root .glow-indigo:hover {
+  box-shadow:
+    0 0 0 1px rgba(129, 140, 248, 0.3),
+    0 0 22px 4px rgba(129, 140, 248, 0.14);
+}
+.carousel-item {
+  width: calc(
+    (100% - (var(--cz-per-mobile) - 1) * var(--cz-gap)) / var(--cz-per-mobile)
+  );
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    width: calc(
+      (100% - (var(--cz-per-tablet) - 1) * var(--cz-gap)) / var(--cz-per-tablet)
+    );
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-item {
+    width: calc(
+      (100% - (var(--cz-per-desktop) - 1) * var(--cz-gap)) /
+        var(--cz-per-desktop)
+    );
+  }
+}
+
+/* ── Timeline animation ──────────────────────────────────── */
+@keyframes timelineCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.timeline-card {
+  opacity: 0;
+  animation: timelineCardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Language progress bar ───────────────────────────────── */
+@keyframes langBarFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--lang-level);
+  }
+}
+.lang-bar-fill {
+  width: 0;
+  animation: langBarFill 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
+}
+
 /* ── Hamburger drawer item entrance ──────────────────────── */
 @keyframes drawerItemIn {
   from {

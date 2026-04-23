@@ -1,5 +1,6 @@
 "use client";
 
+import { Carousel } from "@/components/ui/Carousel";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -39,18 +40,25 @@ export function CertificatesSection() {
           description={t("certificates.description")}
         />
 
-        <div className="-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 no-scrollbar md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
+        <Carousel
+          itemsPerViewDesktop={3}
+          itemsPerViewTablet={2}
+          itemsPerViewMobile={1}
+          gap={20}
+          glowClass="glow-blue"
+          ariaLabel="Certificados"
+        >
           {certificateData.map((certificate, i) => {
             const ct = certTranslations[i];
             return (
               <article
                 key={certificate.id}
-                className="group w-[85%] shrink-0 snap-center overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-800/35 transition hover:bg-slate-800/55 glow-blue md:w-auto md:shrink"
+                className="group h-full overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-800/35 transition hover:bg-slate-800/55 glow-blue"
               >
                 <button
                   type="button"
                   onClick={() => setSelectedIndex(i)}
-                  className="block w-full text-left"
+                  className="flex h-full w-full flex-col text-left"
                 >
                   <div className="relative aspect-[4/3] w-full bg-slate-950">
                     <Image
@@ -61,7 +69,7 @@ export function CertificatesSection() {
                     />
                   </div>
 
-                  <div className="p-5">
+                  <div className="flex flex-1 flex-col p-5">
                     <p className="mb-2 text-xs uppercase tracking-[0.2em] text-slate-500">
                       {ct.category}
                     </p>
@@ -76,7 +84,7 @@ export function CertificatesSection() {
               </article>
             );
           })}
-        </div>
+        </Carousel>
       </section>
 
       {selectedIndex !== null && (

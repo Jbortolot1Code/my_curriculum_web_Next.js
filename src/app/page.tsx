@@ -19,7 +19,7 @@ export default function Home() {
         <StickyHeroSection>
           <HeroSection />
         </StickyHeroSection>
-        <ScrollFadeSection className="relative z-10"><AboutSection /></ScrollFadeSection>
+        <ScrollFadeSection variant="late" className="relative z-10"><AboutSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><ExperienceSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><ProjectsSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><SkillsSection /></ScrollFadeSection>

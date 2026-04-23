@@ -35,11 +35,13 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Trajetória e atuação",
       description:
         "Uma visão resumida da minha atuação profissional e minha trajetória de hardskills e softskills.",
+      currentLabel: "Atual",
       items: [
         {
           company: "Tribunal de Justiça do Rio Grande do Sul",
           role: "Atuação com dados, folha de pagamento e automação",
-          period: "Desde 2018 (Atualmente em atuação)",
+          period: "Desde 2018",
+          periodDetail: "Atualmente em atuação",
           description:
             "Atuação em rotinas analíticas, organização de bases complexas e desenvolvimento de soluções para tratamento, cruzamento e visualização de dados.",
           highlights: [
@@ -52,7 +54,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Indústria Antoniazzi e Cia Ltda",
           role: "Coordenador de Produção e Expedição",
-          period: "2011 a 2015",
+          period: "2011 – 2015",
           description:
             "Coordenação de equipe e recursos para produção industrial no ramo alimentício.",
           highlights: [
@@ -65,7 +67,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Exército Brasileiro",
           role: "Oficial das Forças Armadas - 2º Tenente",
-          period: "2008 - 2011",
+          period: "2008 – 2011",
           description: "Oficial Temporário do Exército Brasileiro.",
           highlights: [
             "Disciplina, organização e liderança de equipes em contextos desafiadores",
@@ -80,32 +82,37 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "O que venho construindo",
       description:
         "Alguns dos projetos e frentes técnicas que desenvolvo com foco em dados, automação, visualização e aplicações analíticas.",
+      statusDone: "Concluído",
+      statusInProgress: "Em andamento",
       items: [
         {
           title: "ETL e estruturação de bases Access → SQLite",
           description:
-            "Criação de pipelines para consolidar dados oriundos de bases legadas, organizar tabelas analíticas e preparar informações para consultas, validações e aplicações posteriores.",
+            "Migração e consolidação de dados oriundos de bases legadas em Access para estrutura analítica em SQLite, com pipelines de transformação, padronização e preparação de dados para validações, consultas históricas e aplicações analíticas.",
           stack: ["Python", "SQLite", "Access", "SQL"],
-          status: "Finalizado - TJRS",
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Dashboards interativos para análise de folha",
           description:
-            "Desenvolvimento de dashboards para exploração de dados financeiros, passivos e indicadores administrativos, com foco em visualização clara, filtros e apoio à tomada de decisão.",
+            "Criação de dashboards voltados à análise de folha de pagamento e passivos financeiros, com visualizações interativas, filtros gerenciais e exploração de indicadores para acompanhamento e suporte à decisão.",
           stack: ["Python", "Streamlit", "Pandas", "Qlik Sense"],
-          status: "Em andamento - TJRS",
+          statusType: "in-progress",
+          context: "TJRS",
         },
         {
           title: "Módulos de Cálculo Retroativos e Prospectivos",
           description:
-            "Desenvolvimento de módulos de apuração envolvendo composição de bases de cálculo, aplicações de juros e correção monetária, projeções de reajustes salariais. Escopo do projeto inclui servidores públicos, magistrados, celetistas e cargos em comissão",
-          stack: ["Python", "Streamlit", "Pandas"],
-          status: "Em andamento - TJRS",
+            "Desenvolvimento de módulos para cálculo de passivos, retroativos e projeções de despesas, contemplando regras de base de cálculo, juros, correção monetária e simulações aplicadas a diferentes categorias funcionais.",
+          stack: ["Python", "Streamlit", "Pandas", "Matemática Financeira", "Contabilidade"],
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Projetos de Machine Learning",
           description:
-            "Construção de modelo de regressão linear para projeção financeira de folha de pagamento considerando sazonalidades históricas e aplicação de técnicas de lagging e rolling.",
+            "Aplicação de modelos de regressão linear em séries históricas de folha de pagamento para projeção de despesas, utilizando defasagens temporais e janelas móveis como apoio a análises preditivas.",
           stack: [
             "Python",
             "scikit-learn",
@@ -114,7 +121,16 @@ export const translations: Record<Language, Record<string, unknown>> = {
             "Regressão Linear",
             "Séries Temporais",
           ],
-          status: "Finalizado - Projeto Pós-Graduação",
+          statusType: "done",
+          context: "Pós-Graduação",
+        },
+        {
+          title: "Currículo e Portfolio Web Interativo",
+          description:
+            "Aplicação web multi-idioma com design responsivo, timeline interativa de experiências, carrosséis dinâmicos, formulário de contato com envio por e-mail e analytics integrado. Plataforma pessoal desenvolvida como vitrine profissional e demonstração técnica em React + Next.js.",
+          stack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Vercel"],
+          statusType: "in-progress",
+          context: "Projeto Pessoal",
         },
       ],
     },
@@ -123,11 +139,57 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Tecnologias e frentes de atuação",
       description:
         "Conjunto de ferramentas, linguagens e áreas em que venho atuando com maior frequência em projetos de dados, automação, visualização e análise.",
+      languagesTitle: "Idiomas",
+      languagesDescription:
+        "Domínios e estudos atuais em línguas para atuação profissional e técnica.",
       groups: [
-        { title: "Linguagens e programação", items: ["Python", "SQL", "VBA", "TypeScript"] },
-        { title: "Dados e bancos", items: ["Pandas", "SQLite", "Access", "ETL", "Modelagem de dados"] },
-        { title: "Visualização e apps", items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"] },
-        { title: "Análise e ML", items: ["Machine Learning", "Estatística", "Validação", "Feature engineering"] },
+        {
+          key: "languages",
+          title: "Linguagens & Programação",
+          items: ["Python", "SQL", "VBA", "TypeScript"],
+        },
+        {
+          key: "backend",
+          title: "Back-end & Databases",
+          items: ["Pandas", "SQLite", "Access", "ETL", "Modelagem de dados"],
+        },
+        {
+          key: "frontend",
+          title: "Front-end & Visualização",
+          items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"],
+        },
+        {
+          key: "ml",
+          title: "Análise & Machine Learning",
+          items: [
+            "Machine Learning",
+            "Estatística",
+            "Validação",
+            "Feature engineering",
+          ],
+        },
+      ],
+      languages: [
+        {
+          code: "br",
+          name: "Português",
+          level: "Nativo",
+          levelPercent: 100,
+        },
+        {
+          code: "gb",
+          name: "Inglês",
+          level: "Intermediário",
+          levelPercent: 55,
+          note: "Em progresso — aulas particulares + preparação Cambridge (12 meses)",
+        },
+        {
+          code: "es",
+          name: "Espanhol",
+          level: "Intermediário",
+          levelPercent: 65,
+          note: "Conversação fluida sem certificação formal",
+        },
       ],
     },
     certificates: {
@@ -240,11 +302,13 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Career path",
       description:
         "A summarized view of my professional experience and my journey of hard skills and soft skills.",
+      currentLabel: "Current",
       items: [
         {
           company: "Court of Justice of Rio Grande do Sul",
           role: "Data, payroll and automation specialist",
-          period: "Since 2018 (Currently active)",
+          period: "Since 2018",
+          periodDetail: "Currently active",
           description:
             "Working on analytical routines, organizing complex databases and developing solutions for data processing, cross-referencing and visualization.",
           highlights: [
@@ -257,7 +321,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Antoniazzi Industry Ltd.",
           role: "Production and Shipping Coordinator",
-          period: "2011 to 2015",
+          period: "2011 – 2015",
           description:
             "Team and resource coordination for industrial production in the food industry.",
           highlights: [
@@ -270,7 +334,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Brazilian Army",
           role: "Armed Forces Officer - 2nd Lieutenant",
-          period: "2008 - 2011",
+          period: "2008 – 2011",
           description: "Temporary Officer of the Brazilian Army.",
           highlights: [
             "Discipline, organization and team leadership in challenging contexts",
@@ -285,32 +349,37 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "What I have been building",
       description:
         "Some of the projects and technical fronts I develop with a focus on data, automation, visualization and analytical applications.",
+      statusDone: "Completed",
+      statusInProgress: "In progress",
       items: [
         {
           title: "ETL and database structuring Access → SQLite",
           description:
-            "Creation of pipelines to consolidate data from legacy databases, organize analytical tables and prepare information for queries, validations and subsequent applications.",
+            "Migration and consolidation of data from legacy Access databases into an analytical SQLite structure, with transformation pipelines, standardization and data preparation for validations, historical queries and analytical applications.",
           stack: ["Python", "SQLite", "Access", "SQL"],
-          status: "Completed - TJRS",
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Interactive dashboards for payroll analysis",
           description:
-            "Development of dashboards for exploring financial data, liabilities and administrative indicators, with a focus on clear visualization, filters and decision support.",
+            "Development of dashboards focused on payroll and financial liabilities analysis, with interactive visualizations, managerial filters and indicator exploration for monitoring and decision support.",
           stack: ["Python", "Streamlit", "Pandas", "Qlik Sense"],
-          status: "In progress - TJRS",
+          statusType: "in-progress",
+          context: "TJRS",
         },
         {
           title: "Retroactive and Prospective Calculation Modules",
           description:
-            "Development of audit modules involving composition of calculation bases, interest and monetary correction applications, salary adjustment projections. Project scope includes public servants, judges, CLT employees and commissioned positions.",
-          stack: ["Python", "Streamlit", "Pandas"],
-          status: "In progress - TJRS",
+            "Development of modules for calculating liabilities, retroactive amounts and expense projections, covering calculation base rules, interest, monetary correction and simulations applied to different functional categories.",
+          stack: ["Python", "Streamlit", "Pandas", "Financial Math", "Accounting"],
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Machine Learning Projects",
           description:
-            "Building a linear regression model for payroll financial projection considering historical seasonalities and application of lagging and rolling techniques.",
+            "Application of linear regression models on historical payroll time series for expense forecasting, using temporal lags and rolling windows to support predictive analyses.",
           stack: [
             "Python",
             "scikit-learn",
@@ -319,7 +388,16 @@ export const translations: Record<Language, Record<string, unknown>> = {
             "Linear Regression",
             "Time Series",
           ],
-          status: "Completed - Postgraduate Project",
+          statusType: "done",
+          context: "Postgraduate Project",
+        },
+        {
+          title: "Interactive Portfolio Web App",
+          description:
+            "Multi-language web application with responsive design, interactive experience timeline, dynamic carousels, contact form with email delivery and integrated analytics. Personal platform built as a professional showcase and technical demonstration in React + Next.js.",
+          stack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Vercel"],
+          statusType: "in-progress",
+          context: "Personal Project",
         },
       ],
     },
@@ -328,11 +406,57 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Technologies and areas of expertise",
       description:
         "Set of tools, languages and areas in which I have been working most frequently on data, automation, visualization and analysis projects.",
+      languagesTitle: "Languages",
+      languagesDescription:
+        "Current proficiency and studies in languages for professional and technical use.",
       groups: [
-        { title: "Languages and programming", items: ["Python", "SQL", "VBA", "TypeScript"] },
-        { title: "Data and databases", items: ["Pandas", "SQLite", "Access", "ETL", "Data modeling"] },
-        { title: "Visualization and apps", items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"] },
-        { title: "Analysis and ML", items: ["Machine Learning", "Statistics", "Validation", "Feature engineering"] },
+        {
+          key: "languages",
+          title: "Languages & Programming",
+          items: ["Python", "SQL", "VBA", "TypeScript"],
+        },
+        {
+          key: "backend",
+          title: "Back-end & Databases",
+          items: ["Pandas", "SQLite", "Access", "ETL", "Data modeling"],
+        },
+        {
+          key: "frontend",
+          title: "Front-end & Visualization",
+          items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"],
+        },
+        {
+          key: "ml",
+          title: "Analysis & Machine Learning",
+          items: [
+            "Machine Learning",
+            "Statistics",
+            "Validation",
+            "Feature engineering",
+          ],
+        },
+      ],
+      languages: [
+        {
+          code: "br",
+          name: "Portuguese",
+          level: "Native",
+          levelPercent: 100,
+        },
+        {
+          code: "gb",
+          name: "English",
+          level: "Intermediate",
+          levelPercent: 55,
+          note: "In progress — private lessons + Cambridge preparation (12 months)",
+        },
+        {
+          code: "es",
+          name: "Spanish",
+          level: "Intermediate",
+          levelPercent: 65,
+          note: "Fluent conversation without formal certification",
+        },
       ],
     },
     certificates: {
@@ -445,11 +569,13 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Trayectoria profesional",
       description:
         "Una visión resumida de mi actuación profesional y mi trayectoria de habilidades técnicas e interpersonales.",
+      currentLabel: "Actual",
       items: [
         {
           company: "Tribunal de Justicia de Rio Grande do Sul",
           role: "Especialista en datos, nómina y automatización",
-          period: "Desde 2018 (Actualmente en actividad)",
+          period: "Desde 2018",
+          periodDetail: "Actualmente en actividad",
           description:
             "Actuación en rutinas analíticas, organización de bases complejas y desarrollo de soluciones para tratamiento, cruce y visualización de datos.",
           highlights: [
@@ -462,7 +588,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Industria Antoniazzi y Cía Ltda",
           role: "Coordinador de Producción y Expedición",
-          period: "2011 a 2015",
+          period: "2011 – 2015",
           description:
             "Coordinación de equipo y recursos para producción industrial en el sector alimenticio.",
           highlights: [
@@ -475,7 +601,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
         {
           company: "Ejército Brasileño",
           role: "Oficial de las Fuerzas Armadas - 2º Teniente",
-          period: "2008 - 2011",
+          period: "2008 – 2011",
           description: "Oficial Temporal del Ejército Brasileño.",
           highlights: [
             "Disciplina, organización y liderazgo de equipos en contextos desafiantes",
@@ -490,32 +616,37 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Lo que vengo construyendo",
       description:
         "Algunos de los proyectos y frentes técnicos que desarrollo con enfoque en datos, automatización, visualización y aplicaciones analíticas.",
+      statusDone: "Finalizado",
+      statusInProgress: "En progreso",
       items: [
         {
           title: "ETL y estructuración de bases Access → SQLite",
           description:
-            "Creación de pipelines para consolidar datos provenientes de bases legadas, organizar tablas analíticas y preparar información para consultas, validaciones y aplicaciones posteriores.",
+            "Migración y consolidación de datos provenientes de bases legadas en Access hacia una estructura analítica en SQLite, con pipelines de transformación, estandarización y preparación de datos para validaciones, consultas históricas y aplicaciones analíticas.",
           stack: ["Python", "SQLite", "Access", "SQL"],
-          status: "Finalizado - TJRS",
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Dashboards interactivos para análisis de nómina",
           description:
-            "Desarrollo de dashboards para exploración de datos financieros, pasivos e indicadores administrativos, con enfoque en visualización clara, filtros y apoyo a la toma de decisiones.",
+            "Creación de dashboards orientados al análisis de nómina y pasivos financieros, con visualizaciones interactivas, filtros gerenciales y exploración de indicadores para seguimiento y apoyo a la toma de decisiones.",
           stack: ["Python", "Streamlit", "Pandas", "Qlik Sense"],
-          status: "En progreso - TJRS",
+          statusType: "in-progress",
+          context: "TJRS",
         },
         {
           title: "Módulos de Cálculo Retroactivos y Prospectivos",
           description:
-            "Desarrollo de módulos de auditoría involucrando composición de bases de cálculo, aplicaciones de intereses y corrección monetaria, proyecciones de reajustes salariales. Alcance del proyecto incluye servidores públicos, magistrados, empleados CLT y cargos comisionados.",
-          stack: ["Python", "Streamlit", "Pandas"],
-          status: "En progreso - TJRS",
+            "Desarrollo de módulos para cálculo de pasivos, retroactivos y proyecciones de gastos, contemplando reglas de base de cálculo, intereses, corrección monetaria y simulaciones aplicadas a diferentes categorías funcionales.",
+          stack: ["Python", "Streamlit", "Pandas", "Matemática Financiera", "Contabilidad"],
+          statusType: "done",
+          context: "TJRS",
         },
         {
           title: "Proyectos de Machine Learning",
           description:
-            "Construcción de modelo de regresión lineal para proyección financiera de nómina considerando estacionalidades históricas y aplicación de técnicas de lagging y rolling.",
+            "Aplicación de modelos de regresión lineal en series históricas de nómina para proyección de gastos, utilizando desfases temporales y ventanas móviles como apoyo a análisis predictivos.",
           stack: [
             "Python",
             "scikit-learn",
@@ -524,7 +655,16 @@ export const translations: Record<Language, Record<string, unknown>> = {
             "Regresión Lineal",
             "Series Temporales",
           ],
-          status: "Finalizado - Proyecto Posgrado",
+          statusType: "done",
+          context: "Proyecto Posgrado",
+        },
+        {
+          title: "Portfolio Web Interactivo",
+          description:
+            "Aplicación web multiidioma con diseño responsivo, línea de tiempo interactiva de experiencias, carruseles dinámicos, formulario de contacto con envío por correo electrónico y analytics integrado. Plataforma personal desarrollada como vitrina profesional y demostración técnica en React + Next.js.",
+          stack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Vercel"],
+          statusType: "in-progress",
+          context: "Proyecto Personal",
         },
       ],
     },
@@ -533,11 +673,57 @@ export const translations: Record<Language, Record<string, unknown>> = {
       title: "Tecnologías y áreas de actuación",
       description:
         "Conjunto de herramientas, lenguajes y áreas en las que vengo actuando con mayor frecuencia en proyectos de datos, automatización, visualización y análisis.",
+      languagesTitle: "Idiomas",
+      languagesDescription:
+        "Dominios y estudios actuales en lenguas para actuación profesional y técnica.",
       groups: [
-        { title: "Lenguajes y programación", items: ["Python", "SQL", "VBA", "TypeScript"] },
-        { title: "Datos y bases de datos", items: ["Pandas", "SQLite", "Access", "ETL", "Modelado de datos"] },
-        { title: "Visualización y apps", items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"] },
-        { title: "Análisis y ML", items: ["Machine Learning", "Estadística", "Validación", "Feature engineering"] },
+        {
+          key: "languages",
+          title: "Lenguajes & Programación",
+          items: ["Python", "SQL", "VBA", "TypeScript"],
+        },
+        {
+          key: "backend",
+          title: "Back-end & Databases",
+          items: ["Pandas", "SQLite", "Access", "ETL", "Modelado de datos"],
+        },
+        {
+          key: "frontend",
+          title: "Front-end & Visualización",
+          items: ["Streamlit", "Dashboards", "Altair", "React", "Next.js"],
+        },
+        {
+          key: "ml",
+          title: "Análisis & Machine Learning",
+          items: [
+            "Machine Learning",
+            "Estadística",
+            "Validación",
+            "Feature engineering",
+          ],
+        },
+      ],
+      languages: [
+        {
+          code: "br",
+          name: "Portugués",
+          level: "Nativo",
+          levelPercent: 100,
+        },
+        {
+          code: "gb",
+          name: "Inglés",
+          level: "Intermedio",
+          levelPercent: 55,
+          note: "En progreso — clases particulares + preparación Cambridge (12 meses)",
+        },
+        {
+          code: "es",
+          name: "Español",
+          level: "Intermedio",
+          levelPercent: 65,
+          note: "Conversación fluida sin certificación formal",
+        },
       ],
     },
     certificates: {

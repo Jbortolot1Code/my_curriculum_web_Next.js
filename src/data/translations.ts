@@ -223,6 +223,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
           category: "Python",
           description: "Curso Python Avançado para Ciência de Dados.",
         },
+        {
+          title: "Pós-Graduação Lato Sensu Data Science com Inteligência Artificial - Xp Educação",
+          issuer: "Xp Educação",
+          date: "2025/2026",
+          category: "Tecnologia/Análise de Dados",
+          description:
+            "Pós-Graduação Lato Sensu em Data Science com Inteligência Artificial, com 592 horas. Projeto aplicado em modelagem e visualização preditiva de folha de pagamento pública com machine learning e Streamlit.",
+        },
       ],
     },
     contact: {
@@ -490,6 +498,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
           category: "Python",
           description: "Advanced Python for Data Science course.",
         },
+        {
+          title: "Postgraduate in Data Science with Artificial Intelligence - Xp Education",
+          issuer: "Xp Education",
+          date: "2025/2026",
+          category: "Technology/Data Analysis",
+          description:
+            "Postgraduate specialization in Data Science with Artificial Intelligence, 592 hours. Applied project on predictive modeling and visualization of public payroll using machine learning and Streamlit.",
+        },
       ],
     },
     contact: {
@@ -756,6 +772,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
           date: "2025",
           category: "Python",
           description: "Curso Python Avanzado para Ciencia de Datos.",
+        },
+        {
+          title: "Posgrado en Data Science con Inteligencia Artificial - Xp Educación",
+          issuer: "Xp Educación",
+          date: "2025/2026",
+          category: "Tecnología/Análisis de Datos",
+          description:
+            "Posgrado Lato Sensu en Data Science con Inteligencia Artificial, 592 horas. Proyecto aplicado en modelado y visualización predictiva de nómina pública con machine learning y Streamlit.",
         },
       ],
     },

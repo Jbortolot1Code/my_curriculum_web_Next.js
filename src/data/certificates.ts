@@ -37,4 +37,16 @@ export const certificates: Certificate[] = [
     description:
       "Curso Python Avançado para Ciência de Dados.",
   },
+  {
+    id: "cert-4",
+    title: "Pós-Graduação Lato Sensu Data Science com Inteligência Artificial - Xp Educação",
+    issuer: "Xp Educação",
+    date: "2025/2026",
+    category: "Tecnologia/Análise de Dados",
+    thumbnail: "/images/certificates/Certificado_Pos_Data_Science_com_IA-thumb.jpg",
+    image: "/images/certificates/Certificado_Pos_Data_Science_com_IA-preview.jpg",
+    fileUrl: "/files/certificates/Certificado_Pos_Data_Science_com_IA.pdf",
+    description:
+      "Pós-Graduação Lato Sensu Data Science com Inteligência Artificial.",
+  },
 ];

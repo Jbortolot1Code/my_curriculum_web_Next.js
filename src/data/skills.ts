@@ -8,8 +8,8 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     key: "backend",
-    title: "Back-end & Databases",
-    items: ["Pandas", "SQLite", "Access", "ETL", "Modelagem de dados"],
+    title: "Engenharia de dados e bancos locais",
+    items: ["Pandas", "SQLite", "DuckDB", "DBeaver", "Microsoft Access", "ETL", "Modelagem de dados", "Estruturas de dados locais", "SCD tipo 2", "Versionamento temporal"],
   },
   {
     key: "frontend",

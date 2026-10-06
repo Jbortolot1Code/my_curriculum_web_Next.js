@@ -27,6 +27,7 @@ export function Navbar() {
     { href: "#projetos", label: t("nav.projects") },
     { href: "#skills", label: t("nav.skills") },
     { href: "#certificados", label: t("nav.certificates") },
+    { href: "#referencias", label: t("nav.references") },
     { href: "#contato", label: t("nav.contact") },
   ];
 
@@ -91,13 +92,13 @@ export function Navbar() {
           <span className="text-indigo-400">.</span>
         </a>
 
-        <nav className="hidden flex-1 justify-center md:flex">
-          <div className="flex w-full max-w-2xl justify-between text-sm text-slate-300">
+        <nav className="hidden flex-1 justify-center lg:flex">
+          <div className="flex w-full max-w-3xl justify-between text-sm text-slate-300">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-white"
+                className="rounded-full px-2 py-2 transition hover:bg-white/5 hover:text-white lg:px-4"
               >
                 {item.label}
               </a>
@@ -105,12 +106,12 @@ export function Navbar() {
           </div>
         </nav>
 
-        <div className="hidden md:flex items-center gap-2 ml-4">{flagButtons}</div>
+        <div className="hidden lg:flex items-center gap-2 ml-4">{flagButtons}</div>
 
         <button
           type="button"
           onClick={toggle}
-          className="md:hidden relative inline-flex h-10 w-10 items-center justify-center overflow-visible rounded-lg border border-white/10 bg-white/5 text-white transition active:scale-90 hover:bg-white/10"
+          className="lg:hidden relative inline-flex h-10 w-10 items-center justify-center overflow-visible rounded-lg border border-white/10 bg-white/5 text-white transition active:scale-90 hover:bg-white/10"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -145,7 +146,7 @@ export function Navbar() {
 
       <div
         id="mobile-menu"
-        className={`md:hidden overflow-hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-300 ease-out ${
+        className={`lg:hidden overflow-hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-300 ease-out ${
           open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >

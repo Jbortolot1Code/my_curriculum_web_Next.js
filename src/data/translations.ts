@@ -8,6 +8,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       projects: "Projetos",
       skills: "Skills",
       certificates: "Certificados",
+      references: "Referências",
       contact: "Contato",
     },
     hero: {
@@ -20,8 +21,10 @@ export const translations: Record<Language, Record<string, unknown>> = {
       description:
         "Uma visão objetiva do meu perfil, da minha atuação e do foco técnico que venho desenvolvendo.",
       paragraph:
-        "Tenho experiência na estruturação e análise de grandes volumes de dados, no desenvolvimento de pipelines e automações, na criação de dashboards interativos e na aplicação de técnicas analíticas e preditivas para geração de insights e apoio à decisão.",
+        "Tenho experiência em engenharia de dados e na estruturação de bases locais com SQLite, Microsoft Access e DBeaver, incluindo integração entre sistemas atuais e legados, modelagem SCD tipo 2 e versionamento temporal de regras de negócio. Também desenvolvo pipelines, automações e dashboards para análise de grandes volumes de dados e apoio à decisão.",
       areasTitle: "Frentes de atuação",
+      educationTitle: "Formação acadêmica",
+      currentStudyLabel: "Cursando atualmente",
       areas: [
         "Análise e estruturação de dados",
         "Automação de processos e rotinas",
@@ -85,6 +88,20 @@ export const translations: Record<Language, Record<string, unknown>> = {
       statusDone: "Concluído",
       statusInProgress: "Em andamento",
       items: [
+        {
+          title: "Cálculo de passivos de folha com regras temporais",
+          description: "Refatoração de um sistema legado de cálculos em Microsoft Access e Excel para uma solução em Python, SQLite e DuckDB, voltada à apuração de passivos de folha com juros e correção monetária. Integração de dados dos sistemas atual e legado, abrangendo mais de 300 milhões de linhas e 20 anos de histórico. Versionamento temporal de regras de negócio e modelagem SCD tipo 2 para preservar o histórico e aplicar os critérios de cálculo de cada período.",
+          stack: ["Microsoft Access", "Microsoft Excel", "Python", "SQLite", "DuckDB", "SCD tipo 2", "Versionamento temporal"],
+          statusType: "done",
+          context: "Folha de pagamento",
+        },
+        {
+          title: "Repercussões financeiras de folha de pagamento",
+          description: "Solução em VBA que integra Microsoft Access e Excel para apurar repercussões financeiras de folha de pagamento. Estruturação do fluxo entre bases de dados e planilhas, aplicação de regras de cálculo e consolidação de resultados para análise financeira e apoio à decisão.",
+          stack: ["VBA", "Microsoft Access", "Microsoft Excel"],
+          statusType: "done",
+          context: "Folha de pagamento",
+        },
         {
           title: "ETL e estruturação de bases Access → SQLite",
           description:
@@ -150,8 +167,8 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
         {
           key: "backend",
-          title: "Back-end & Databases",
-          items: ["Pandas", "SQLite", "Access", "ETL", "Modelagem de dados"],
+          title: "Engenharia de dados e bancos locais",
+          items: ["Pandas", "SQLite", "DuckDB", "DBeaver", "Microsoft Access", "ETL", "Modelagem de dados", "Estruturas de dados locais", "SCD tipo 2", "Versionamento temporal"],
         },
         {
           key: "frontend",
@@ -233,6 +250,19 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
       ],
     },
+    references: {
+      eyebrow: "Referências",
+      title: "Reconhecimento profissional",
+      description: "Documento que registra o reconhecimento da minha atuação e das competências desenvolvidas ao longo da trajetória profissional.",
+      openFile: "Abrir referência (PDF)",
+      items: {
+        "army-commendation": {
+          title: "Referência elogiosa",
+          issuer: "Exército Brasileiro · 1º Regimento de Carros de Combate",
+          description: "Referência emitida ao término do serviço como oficial, destacando liderança, organização, trabalho em equipe e atuação na área de comunicações e redes de informática.",
+        },
+      },
+    },
     contact: {
       eyebrow: "Contato",
       title: "Vamos conversar",
@@ -266,11 +296,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
     footer: {
       copyright: "Currículo web com desenvolvimento autônomo por Jéferson Bortoloti",
       downloadCV: "Baixar Currículo Acadêmico",
+      downloadProfessionalCV: "Baixar currículo profissional com anexos",
+      generatingCV: "Preparando PDF...",
+      downloadError: "Não foi possível gerar o PDF. Verifique sua conexão e tente novamente.",
     },
     profile: {
       role: "Dados, Automação e Soluções na Interface entre Negócio e Tecnologia",
       summary:
-        "Atuo na interface entre negócio e tecnologia, traduzindo regras, processos e necessidades operacionais em soluções de dados, automação e apoio à decisão. Minha base começou com VBA, Power Query, Power Pivot e Access, evoluiu para Python e Jupyter Notebook na exploração e análise de dados, e hoje inclui dashboards em Streamlit, aplicações web com Next.js, pipelines e módulos para cálculos prospectivos de despesas, além de projetos de machine learning com foco em regressão linear. Também tenho experiência na refatoração de bases Access para SQLite, estruturando tabelas-fato com dezenas de milhões de registros para análise, desempenho e escalabilidade. Sou pós-graduando em Data Science e venho direcionando minha atuação para integrar conhecimento técnico, visão analítica e entendimento de negócio.",
+        "Atuo na interface entre negócio e tecnologia, traduzindo regras, processos e necessidades operacionais em soluções de dados, automação e apoio à decisão. Minha base começou com VBA, Power Query, Power Pivot e Access, evoluiu para Python e Jupyter Notebook na exploração e análise de dados, e hoje inclui dashboards em Streamlit, aplicações web com Next.js, pipelines e módulos para cálculos prospectivos de despesas, além de projetos de machine learning com foco em regressão linear. Também tenho experiência na refatoração de bases Access para SQLite, estruturando tabelas-fato com dezenas de milhões de registros para análise, desempenho e escalabilidade. Tenho formação de pós-graduação em Data Science e curso Bacharelado em Ciência da Computação na FIAP - Instituto Caldeira, com conclusão prevista em 2030 e venho direcionando minha atuação para integrar conhecimento técnico, visão analítica e entendimento de negócio.",
       contactText:
         "Estou aberto a conexões profissionais e oportunidades em dados, automação e desenvolvimento de soluções aplicadas, especialmente em contextos que exijam articulação entre regras de negócio, análise e tecnologia.",
     },
@@ -283,6 +316,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       projects: "Projects",
       skills: "Skills",
       certificates: "Certificates",
+      references: "References",
       contact: "Contact",
     },
     hero: {
@@ -295,8 +329,10 @@ export const translations: Record<Language, Record<string, unknown>> = {
       description:
         "An objective overview of my profile, my work and the technical focus I have been developing.",
       paragraph:
-        "I have experience in structuring and analyzing large volumes of data, developing pipelines and automations, creating interactive dashboards and applying analytical and predictive techniques to generate insights and support decision-making.",
+        "I have experience in data engineering and structuring local databases with SQLite, Microsoft Access and DBeaver, including integration of current and legacy systems, SCD type 2 modeling and temporal versioning of business rules. I also develop pipelines, automation and dashboards to analyze large datasets and support decisions.",
       areasTitle: "Areas of expertise",
+      educationTitle: "Education",
+      currentStudyLabel: "Currently studying",
       areas: [
         "Data analysis and structuring",
         "Process and routine automation",
@@ -360,6 +396,20 @@ export const translations: Record<Language, Record<string, unknown>> = {
       statusDone: "Completed",
       statusInProgress: "In progress",
       items: [
+        {
+          title: "Payroll liabilities with temporal business rules",
+          description: "Refactoring of a legacy calculation system built with Microsoft Access and Excel into a Python, SQLite and DuckDB solution for payroll liabilities, interest and monetary adjustments. Integration of current and legacy system data, covering more than 300 million rows and 20 years of history. Temporal versioning of business rules and SCD type 2 modeling to preserve historical records and apply the calculation criteria relevant to each period.",
+          stack: ["Microsoft Access", "Microsoft Excel", "Python", "SQLite", "DuckDB", "SCD type 2", "Temporal versioning"],
+          statusType: "done",
+          context: "Payroll",
+        },
+        {
+          title: "Financial impacts of payroll",
+          description: "VBA solution integrating Microsoft Access and Excel to calculate the financial impacts of payroll. Structured data flows between databases and spreadsheets, application of calculation rules and consolidation of results for financial analysis and decision support.",
+          stack: ["VBA", "Microsoft Access", "Microsoft Excel"],
+          statusType: "done",
+          context: "Payroll",
+        },
         {
           title: "ETL and database structuring Access → SQLite",
           description:
@@ -425,8 +475,8 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
         {
           key: "backend",
-          title: "Back-end & Databases",
-          items: ["Pandas", "SQLite", "Access", "ETL", "Data modeling"],
+          title: "Data engineering and local databases",
+          items: ["Pandas", "SQLite", "DuckDB", "DBeaver", "Microsoft Access", "ETL", "Data modeling", "Local data structures", "SCD type 2", "Temporal versioning"],
         },
         {
           key: "frontend",
@@ -508,6 +558,19 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
       ],
     },
+    references: {
+      eyebrow: "References",
+      title: "Professional recognition",
+      description: "A document recording recognition of my work and the skills developed throughout my career.",
+      openFile: "Open reference (PDF)",
+      items: {
+        "army-commendation": {
+          title: "Letter of commendation",
+          issuer: "Brazilian Army · 1st Tank Regiment",
+          description: "Reference issued at the end of my service as an officer, highlighting leadership, organization, teamwork and work in communications and computer networks.",
+        },
+      },
+    },
     contact: {
       eyebrow: "Contact",
       title: "Let's talk",
@@ -541,11 +604,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
     footer: {
       copyright: "Web resume with independent development by Jéferson Bortoloti",
       downloadCV: "Download Academic CV",
+      downloadProfessionalCV: "Download professional CV with documents",
+      generatingCV: "Preparing PDF...",
+      downloadError: "Could not generate the PDF. Check your connection and try again.",
     },
     profile: {
       role: "Data, Automation and Solutions at the Interface between Business and Technology",
       summary:
-        "I work at the interface between business and technology, translating rules, processes and operational needs into data solutions, automation and decision support. My foundation started with VBA, Power Query, Power Pivot and Access, evolved to Python and Jupyter Notebook for data exploration and analysis, and today includes dashboards in Streamlit, web applications with Next.js, pipelines and modules for prospective expense calculations, as well as machine learning projects focused on linear regression. I also have experience refactoring Access databases to SQLite, structuring fact tables with tens of millions of records for analysis, performance and scalability. I am a postgraduate student in Data Science and have been directing my work to integrate technical knowledge, analytical vision and business understanding.",
+        "I work at the interface between business and technology, translating rules, processes and operational needs into data solutions, automation and decision support. My foundation started with VBA, Power Query, Power Pivot and Access, evolved to Python and Jupyter Notebook for data exploration and analysis, and today includes dashboards in Streamlit, web applications with Next.js, pipelines and modules for prospective expense calculations, as well as machine learning projects focused on linear regression. I also have experience refactoring Access databases to SQLite, structuring fact tables with tens of millions of records for analysis, performance and scalability. I have postgraduate training in Data Science and am pursuing a Bachelor's Degree in Computer Science at FIAP - Instituto Caldeira, with expected graduation in 2030 and have been directing my work to integrate technical knowledge, analytical vision and business understanding.",
       contactText:
         "I am open to professional connections and opportunities in data, automation and development of applied solutions, especially in contexts that require articulation between business rules, analysis and technology.",
     },
@@ -558,6 +624,7 @@ export const translations: Record<Language, Record<string, unknown>> = {
       projects: "Proyectos",
       skills: "Habilidades",
       certificates: "Certificados",
+      references: "Referencias",
       contact: "Contacto",
     },
     hero: {
@@ -570,8 +637,10 @@ export const translations: Record<Language, Record<string, unknown>> = {
       description:
         "Una visión objetiva de mi perfil, mi actuación y el enfoque técnico que vengo desarrollando.",
       paragraph:
-        "Tengo experiencia en la estructuración y análisis de grandes volúmenes de datos, en el desarrollo de pipelines y automatizaciones, en la creación de dashboards interactivos y en la aplicación de técnicas analíticas y predictivas para la generación de insights y apoyo a la toma de decisiones.",
+        "Tengo experiencia en ingeniería de datos y en la estructuración de bases locales con SQLite, Microsoft Access y DBeaver, incluyendo integración de sistemas actuales y legados, modelado SCD tipo 2 y versionado temporal de reglas de negocio. También desarrollo pipelines, automatizaciones y dashboards para analizar grandes volúmenes de datos y apoyar decisiones.",
       areasTitle: "Áreas de actuación",
+      educationTitle: "Formación académica",
+      currentStudyLabel: "Estudios en curso",
       areas: [
         "Análisis y estructuración de datos",
         "Automatización de procesos y rutinas",
@@ -635,6 +704,20 @@ export const translations: Record<Language, Record<string, unknown>> = {
       statusDone: "Finalizado",
       statusInProgress: "En progreso",
       items: [
+        {
+          title: "Cálculo de pasivos de nómina con reglas temporales",
+          description: "Refactorización de un sistema legado de cálculos en Microsoft Access y Excel hacia una solución en Python, SQLite y DuckDB para calcular pasivos de nómina, intereses y corrección monetaria. Integración de datos de los sistemas actual y legado, abarcando más de 300 millones de filas y 20 años de histórico. Versionado temporal de reglas de negocio y modelado SCD tipo 2 para preservar el histórico y aplicar los criterios de cálculo de cada período.",
+          stack: ["Microsoft Access", "Microsoft Excel", "Python", "SQLite", "DuckDB", "SCD tipo 2", "Versionado temporal"],
+          statusType: "done",
+          context: "Nómina",
+        },
+        {
+          title: "Repercusiones financieras de nómina",
+          description: "Solución en VBA que integra Microsoft Access y Excel para calcular las repercusiones financieras de nómina. Estructuración del flujo entre bases de datos y hojas de cálculo, aplicación de reglas de cálculo y consolidación de resultados para análisis financiero y apoyo a decisiones.",
+          stack: ["VBA", "Microsoft Access", "Microsoft Excel"],
+          statusType: "done",
+          context: "Nómina",
+        },
         {
           title: "ETL y estructuración de bases Access → SQLite",
           description:
@@ -700,8 +783,8 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
         {
           key: "backend",
-          title: "Back-end & Databases",
-          items: ["Pandas", "SQLite", "Access", "ETL", "Modelado de datos"],
+          title: "Ingeniería de datos y bases locales",
+          items: ["Pandas", "SQLite", "DuckDB", "DBeaver", "Microsoft Access", "ETL", "Modelado de datos", "Estructuras de datos locales", "SCD tipo 2", "Versionado temporal"],
         },
         {
           key: "frontend",
@@ -783,6 +866,19 @@ export const translations: Record<Language, Record<string, unknown>> = {
         },
       ],
     },
+    references: {
+      eyebrow: "Referencias",
+      title: "Reconocimiento profesional",
+      description: "Documento que registra el reconocimiento de mi actuación y de las competencias desarrolladas a lo largo de mi trayectoria profesional.",
+      openFile: "Abrir referencia (PDF)",
+      items: {
+        "army-commendation": {
+          title: "Referencia elogiosa",
+          issuer: "Ejército Brasileño · 1.er Regimiento de Carros de Combate",
+          description: "Referencia emitida al término del servicio como oficial, destacando liderazgo, organización, trabajo en equipo y actuación en comunicaciones y redes informáticas.",
+        },
+      },
+    },
     contact: {
       eyebrow: "Contacto",
       title: "Hablemos",
@@ -816,11 +912,14 @@ export const translations: Record<Language, Record<string, unknown>> = {
     footer: {
       copyright: "Currículum web con desarrollo independiente por Jéferson Bortoloti",
       downloadCV: "Descargar Currículum Académico",
+      downloadProfessionalCV: "Descargar currículum profesional con anexos",
+      generatingCV: "Preparando PDF...",
+      downloadError: "No se pudo generar el PDF. Comprueba tu conexión e inténtalo de nuevo.",
     },
     profile: {
       role: "Datos, Automatización y Soluciones en la Interfaz entre Negocio y Tecnología",
       summary:
-        "Actúo en la interfaz entre negocio y tecnología, traduciendo reglas, procesos y necesidades operacionales en soluciones de datos, automatización y apoyo a la toma de decisiones. Mi base comenzó con VBA, Power Query, Power Pivot y Access, evolucionó hacia Python y Jupyter Notebook para la exploración y análisis de datos, y hoy incluye dashboards en Streamlit, aplicaciones web con Next.js, pipelines y módulos para cálculos prospectivos de gastos, además de proyectos de machine learning con enfoque en regresión lineal. También tengo experiencia en la refactorización de bases Access a SQLite, estructurando tablas de hechos con decenas de millones de registros para análisis, rendimiento y escalabilidad. Soy estudiante de posgrado en Data Science y he estado dirigiendo mi actuación para integrar conocimiento técnico, visión analítica y comprensión del negocio.",
+        "Actúo en la interfaz entre negocio y tecnología, traduciendo reglas, procesos y necesidades operacionales en soluciones de datos, automatización y apoyo a la toma de decisiones. Mi base comenzó con VBA, Power Query, Power Pivot y Access, evolucionó hacia Python y Jupyter Notebook para la exploración y análisis de datos, y hoy incluye dashboards en Streamlit, aplicaciones web con Next.js, pipelines y módulos para cálculos prospectivos de gastos, además de proyectos de machine learning con enfoque en regresión lineal. También tengo experiencia en la refactorización de bases Access a SQLite, estructurando tablas de hechos con decenas de millones de registros para análisis, rendimiento y escalabilidad. Tengo formación de posgrado en Data Science y curso un grado en Ciencias de la Computación en FIAP - Instituto Caldeira, con graduación prevista en 2030 y he estado dirigiendo mi actuación para integrar conocimiento técnico, visión analítica y comprensión del negocio.",
       contactText:
         "Estoy abierto a conexiones profesionales y oportunidades en datos, automatización y desarrollo de soluciones aplicadas, especialmente en contextos que requieran articulación entre reglas de negocio, análisis y tecnología.",
     },

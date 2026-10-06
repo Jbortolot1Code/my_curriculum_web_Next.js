@@ -1,5 +1,7 @@
 import type { ComponentType } from "react";
 import {
+  SiDbeaver,
+  SiDuckdb,
   SiNextdotjs,
   SiPandas,
   SiPython,
@@ -22,6 +24,8 @@ type BrandIconProps = {
 type BrandIcon = ComponentType<BrandIconProps>;
 
 const BRAND_ICONS: Record<string, BrandIcon> = {
+  dbeaver: SiDbeaver,
+  duckdb: SiDuckdb,
   python: SiPython,
   typescript: SiTypescript,
   react: SiReact,
@@ -45,6 +49,15 @@ type CustomIcon = {
 // Custom clean stroke-based SVGs for tools Simple Icons doesn't cover
 // (Microsoft Access, SQL, VBA, Altair, etc.)
 const CUSTOM_ICONS: Record<string, CustomIcon> = {
+  excel: {
+    color: "#21A366",
+    paths: [
+      "M10 4H21V20H10",
+      "M10 8H21M10 12H21M10 16H21M16 4V20",
+      "M3 6H12V18H3Z",
+      "M5 9L10 15M10 9L5 15",
+    ],
+  },
   sql: {
     color: "#38BDF8",
     paths: [
@@ -108,12 +121,21 @@ const GENERIC_ICONS: Record<string, GenericIcon> = {
   accounting: { symbol: "€", color: "#F59E0B" },
   contabilidad: { symbol: "€", color: "#F59E0B" },
   etl: { symbol: "⇄", color: "#06B6D4" },
+  "estruturas de dados locais": { symbol: "▤", color: "#06B6D4" },
+  "local data structures": { symbol: "▤", color: "#06B6D4" },
+  "estructuras de datos locales": { symbol: "▤", color: "#06B6D4" },
+  "scd tipo 2": { symbol: "▥", color: "#06B6D4" },
+  "scd type 2": { symbol: "▥", color: "#06B6D4" },
+  "versionamento temporal": { symbol: "⏱", color: "#06B6D4" },
+  "temporal versioning": { symbol: "⏱", color: "#06B6D4" },
+  "versionado temporal": { symbol: "⏱", color: "#06B6D4" },
 };
 
 function normalize(name: string): string {
   return name
     .toLowerCase()
     .replace(/[\s\-.]/g, "")
+    .replace(/^microsoft(?=access$|excel$)/, "")
     .replace(/[áàâã]/g, "a")
     .replace(/[éê]/g, "e")
     .replace(/í/g, "i")
@@ -135,7 +157,7 @@ export function TechIcon({ name, size = 16, className = "" }: TechIconProps) {
   const Brand = BRAND_ICONS[key];
   if (Brand) {
     return (
-      <Brand size={size} color="default" className={className} />
+      <Brand size={size} color={key === "dbeaver" ? "#D4BFA4" : "default"} className={className} />
     );
   }
 

@@ -36,6 +36,9 @@ Thumbs.db
 # typescript
 *.tsbuildinfo
 
+# local PDF previews
+/output/pdf/
+
 # internal dev artifacts (not part of the app)
 *.xlsx
 gera_arvore_projeto.py

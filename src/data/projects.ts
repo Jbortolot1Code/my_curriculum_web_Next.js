@@ -2,6 +2,20 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "Cálculo de passivos de folha com regras temporais",
+    description: "Refatoração de um sistema legado de cálculos em Microsoft Access e Excel para uma solução em Python, SQLite e DuckDB, voltada à apuração de passivos de folha com juros e correção monetária. Integração de dados dos sistemas atual e legado, abrangendo mais de 300 milhões de linhas e 20 anos de histórico. Versionamento temporal de regras de negócio e modelagem SCD tipo 2 para preservar o histórico e aplicar os critérios de cálculo de cada período.",
+    stack: ["Microsoft Access", "Microsoft Excel", "Python", "SQLite", "DuckDB", "SCD tipo 2", "Versionamento temporal"],
+    statusType: "done",
+    context: "Folha de pagamento",
+  },
+  {
+    title: "Repercussões financeiras de folha de pagamento",
+    description: "Solução em VBA que integra Microsoft Access e Excel para apurar repercussões financeiras de folha de pagamento. Estruturação do fluxo entre bases de dados e planilhas, aplicação de regras de cálculo e consolidação de resultados para análise financeira e apoio à decisão.",
+    stack: ["VBA", "Microsoft Access", "Microsoft Excel"],
+    statusType: "done",
+    context: "Folha de pagamento",
+  },
+  {
     title: "ETL e estruturação de bases Access → SQLite",
     description:
       "Migração e consolidação de dados oriundos de bases legadas em Access para estrutura analítica em SQLite, com pipelines de transformação, padronização e preparação de dados para validações, consultas históricas e aplicações analíticas.",

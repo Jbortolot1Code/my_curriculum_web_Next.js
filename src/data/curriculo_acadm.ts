@@ -1,3 +1,4 @@
+import { education } from "./education";
 import type { Language } from "./translations";
 
 export type AcademicEntry = {
@@ -9,6 +10,7 @@ export type AcademicEntry = {
 };
 
 export type AcademicEducation = {
+  status?: "in-progress" | "completed";
   degree: string;
   institution: string;
   location: string;
@@ -45,7 +47,7 @@ export type AcademicPublicationGroup = {
 export type AcademicCV = {
   documentTitle: string;
   researchInterests: { title: string; content?: string };
-  education: { title: string; items?: AcademicEducation[] };
+  education: { title: string; currentStudyLabel: string; items?: AcademicEducation[] };
   researchExperience: { title: string; items?: AcademicEntry[] };
   teachingExperience: { title: string; items?: AcademicEntry[] };
   publications: { title: string; groups?: AcademicPublicationGroup[] };
@@ -73,26 +75,8 @@ export const academicCV: Record<Language, AcademicCV> = {
     },
     education: {
       title: "Formação Acadêmica",
-      items: [
-        {
-          degree:
-            "Pós-Graduação Lato Sensu em Data Science e Machine Learning",
-          institution: "XP Educação",
-          location: "Brasil",
-          period: "2024 – 2025",
-          thesisTitle:
-            "Modelo de regressão linear para projeção financeira de folha de pagamento, com aplicação de técnicas de lagging, rolling e tratamento de sazonalidades históricas",
-          highlights: [
-            "Ênfase em modelagem preditiva, séries temporais e validação de modelos aplicados a dados financeiros",
-          ],
-        },
-        {
-          degree: "Bacharelado em Ciências Contábeis",
-          institution: "Universidade Federal de Santa Maria (UFSM)",
-          location: "Santa Maria, RS, Brasil",
-          period: "Conclusão em 2015",
-        },
-      ],
+      currentStudyLabel: "Cursando atualmente",
+      items: education.pt,
     },
     researchExperience: {
       title: "Experiência em Pesquisa",
@@ -193,12 +177,17 @@ export const academicCV: Record<Language, AcademicCV> = {
           ],
         },
         {
-          title: "Bancos e modelagem de dados",
+          title: "Engenharia de dados e bancos locais",
           items: [
             "SQLite",
+            "DuckDB",
             "Microsoft Access",
+            "DBeaver",
             "ETL",
             "Modelagem de dados",
+            "Estruturas de dados locais",
+            "SCD tipo 2",
+            "Versionamento temporal de regras de negócio",
           ],
         },
         {
@@ -237,26 +226,8 @@ export const academicCV: Record<Language, AcademicCV> = {
     },
     education: {
       title: "Education",
-      items: [
-        {
-          degree:
-            "Postgraduate Specialization in Data Science and Machine Learning",
-          institution: "XP Education",
-          location: "Brazil",
-          period: "2024 – 2025",
-          thesisTitle:
-            "Linear regression model for financial payroll projection, applying lagging, rolling and historical seasonality techniques",
-          highlights: [
-            "Focus on predictive modeling, time series and model validation applied to financial data",
-          ],
-        },
-        {
-          degree: "Bachelor's Degree in Accounting",
-          institution: "Federal University of Santa Maria (UFSM)",
-          location: "Santa Maria, RS, Brazil",
-          period: "Completed in 2015",
-        },
-      ],
+      currentStudyLabel: "Currently studying",
+      items: education.en,
     },
     researchExperience: {
       title: "Research Experience",
@@ -361,8 +332,8 @@ export const academicCV: Record<Language, AcademicCV> = {
           ],
         },
         {
-          title: "Databases and data modeling",
-          items: ["SQLite", "Microsoft Access", "ETL", "Data modeling"],
+          title: "Data engineering and local databases",
+          items: ["SQLite", "DuckDB", "Microsoft Access", "DBeaver", "ETL", "Data modeling", "Local data structures", "SCD type 2", "Temporal versioning of business rules"],
         },
         {
           title: "Visualization and analysis",
@@ -400,26 +371,8 @@ export const academicCV: Record<Language, AcademicCV> = {
     },
     education: {
       title: "Formación Académica",
-      items: [
-        {
-          degree:
-            "Posgrado Lato Sensu en Data Science y Machine Learning",
-          institution: "XP Educación",
-          location: "Brasil",
-          period: "2024 – 2025",
-          thesisTitle:
-            "Modelo de regresión lineal para proyección financiera de nómina, aplicando técnicas de lagging, rolling y tratamiento de estacionalidades históricas",
-          highlights: [
-            "Énfasis en modelado predictivo, series temporales y validación de modelos aplicados a datos financieros",
-          ],
-        },
-        {
-          degree: "Licenciatura en Ciencias Contables",
-          institution: "Universidad Federal de Santa Maria (UFSM)",
-          location: "Santa Maria, RS, Brasil",
-          period: "Conclusión en 2015",
-        },
-      ],
+      currentStudyLabel: "Estudios en curso",
+      items: education.es,
     },
     researchExperience: {
       title: "Experiencia en Investigación",
@@ -524,8 +477,8 @@ export const academicCV: Record<Language, AcademicCV> = {
           ],
         },
         {
-          title: "Bases de datos y modelado",
-          items: ["SQLite", "Microsoft Access", "ETL", "Modelado de datos"],
+          title: "Ingeniería de datos y bases locales",
+          items: ["SQLite", "DuckDB", "Microsoft Access", "DBeaver", "ETL", "Modelado de datos", "Estructuras de datos locales", "SCD tipo 2", "Versionado temporal de reglas de negocio"],
         },
         {
           title: "Visualización y análisis",

@@ -10,6 +10,7 @@ export type Profile = {
   summary: string;
   contactText: string;
   profileImage: string;
+  websiteUrl?: string;
   socials: SocialLink[];
 };
 
@@ -59,4 +60,22 @@ export type LanguageProficiency = {
   level: string;
   levelPercent: number;
   note?: string;
+};
+
+export type Education = {
+  id: string;
+  status: "in-progress" | "completed";
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+  certificateId?: string;
+  thesisTitle?: string;
+  highlights?: string[];
+};
+
+export type ReferenceDocument = {
+  id: string;
+  issuedOn: string;
+  fileUrl: string;
 };

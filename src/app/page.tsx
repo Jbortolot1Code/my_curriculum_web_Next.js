@@ -8,6 +8,7 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ReferencesSection } from "@/components/sections/ReferencesSection";
 import { ScrollFadeSection } from "@/components/ui/ScrollFadeSection";
 import { StickyHeroSection } from "@/components/ui/StickyHeroSection";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <ScrollFadeSection variant="late"><ProjectsSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><SkillsSection /></ScrollFadeSection>
         <ScrollFadeSection variant="late"><CertificatesSection /></ScrollFadeSection>
+        <ScrollFadeSection variant="late"><ReferencesSection /></ScrollFadeSection>
         <ContactSection />
         <Footer />
       </main>

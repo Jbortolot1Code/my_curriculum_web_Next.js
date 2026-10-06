@@ -58,14 +58,16 @@ function renderEntry(entry: AcademicEntry): string {
 </div>`;
 }
 
-function renderEducation(item: AcademicEducation): string {
+function renderEducation(item: AcademicEducation, currentStudyLabel: string): string {
+  const current = item.status === "in-progress";
   const thesis = item.thesisTitle
     ? `<p class="entry-desc"><em>${escapeHtml(item.thesisTitle)}</em></p>`
     : "";
   const advisor = item.advisor
     ? `<p class="entry-desc">${escapeHtml(item.advisor)}</p>`
     : "";
-  return `<div class="entry">
+  return `<div class="entry${current ? " entry-current" : ""}">
+  ${current ? `<p class="study-status">${escapeHtml(currentStudyLabel)}</p>` : ""}
   <div class="entry-header">
     <h3>${escapeHtml(item.degree)}</h3>
     <span class="period">${escapeHtml(item.period)}</span>
@@ -137,7 +139,7 @@ function buildSections(cv: AcademicCV): string {
     blocks.push(
       sectionWrapper(
         cv.education.title,
-        cv.education.items.map(renderEducation).join("\n")
+        cv.education.items.map((item) => renderEducation(item, cv.education.currentStudyLabel)).join("\n")
       )
     );
   }
@@ -293,6 +295,8 @@ export function generateAcademicCV(lang: Language) {
   .doc-title { text-align: center; font-size: 11pt; color: #333; margin-bottom: 2pt; font-style: italic; }
   .contact-line { text-align: center; font-size: 10pt; color: #444; margin-bottom: 12pt; }
   .entry { margin-bottom: 12pt; }
+  .entry-current { padding: 10pt 12pt; border-left: 3pt solid #086675; background: #eef7f8; }
+  .study-status { margin-bottom: 5pt; color: #086675; font-size: 9pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5pt; }
   .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
   .entry-header .period { font-style: italic; font-size: 10pt; white-space: nowrap; }
   .entry-org { font-style: italic; margin-bottom: 2pt; }

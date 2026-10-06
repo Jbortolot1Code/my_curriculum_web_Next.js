@@ -48,3 +48,17 @@ curriculo_web/
 ├── package.json
 ├── tsconfig.json
 └── next.config.ts
+```
+
+## Formação, referências e currículos
+
+- `src/data/education.ts` centraliza a formação em PT, EN e ES. Atualize curso, instituição, período e status aqui; `in-progress` destaca a formação em andamento na página e nos dois currículos.
+- `src/data/references.ts` registra os documentos de referência; seus textos traduzidos ficam em `src/data/translations.ts`. Os PDFs ficam em `public/files/references/`.
+- `src/data/professionalCV.ts` define o resumo profissional e reutiliza experiências e competências da página. A seção de projetos do PDF inclui todos os itens com `statusType: "done"`.
+- `websiteUrl` em `src/data/profile.ts` define o link destacado do currículo web no início do PDF profissional.
+- `src/utils/generateProfessionalCV.ts` gera o PDF no navegador, com foto, fontes incorporadas e links internos para todos os certificados e referências. O código de geração só é carregado ao clicar no botão do rodapé.
+- `src/data/curriculo_acadm.ts` e `src/utils/generateCV.ts` mantêm a versão acadêmica com impressão pelo navegador.
+
+O PDF profissional inclui as páginas completas dos documentos, preservando seus tamanhos e orientações. Assinaturas digitais devem ser verificadas nos PDFs originais disponíveis no site; a cópia combinada serve para apresentação. As fontes Source Sans 3 e sua licença ficam em `public/fonts/cv/`.
+
+Prévias locais em `output/pdf/` são ignoradas pelo Git.
